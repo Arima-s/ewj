@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的购物车 - e万家</title>
+    <link rel="stylesheet" href="style/1720067.css">
+    <link rel="stylesheet" href="style/12440050.css">
+    <script charset="utf-8" src="http://trust.baidu.com/vcard/v.js?siteid=6678405&amp;url=http%3A%2F%2Fwww.ewj.com%2Fcart.html&amp;source=&amp;rnd=561788328&amp;hm=1"></script>
+    <script src="js/pro/hm.js"></script>
+    <script src="http://image2.ewj.com/2015/2/2/50958.js"></script>
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/knockout-3.2.0.debug.js"></script>
+    <script src="js/json2.js"></script>
+    <script src="js/50957.js"></script>
+    <style type="text/css"></style>
+    <script>
+        $(document).ready(function(){
+            var opts = {
+                lines: 12, // The number of lines to draw
+                length: 7, // The length of each line
+                width: 5, // The line thickness
+                radius: 10, // The radius of the inner circle
+                corners: 1, // Corner roundness (0..1)
+                rotate: 0, // The rotation offset
+                direction: 1, // 1: clockwise, -1: counterclockwise
+                color: '#79b235', // #rgb or #rrggbb or array of colors
+                speed: 1, // Rounds per second
+                trail: 100, // Afterglow percentage
+                shadow: false, // Whether to render a shadow
+                hwaccel: false, // Whether to use hardware acceleration
+                className: 'spinner', // The CSS class to assign to the spinner
+                zIndex: 2e9, // The z-index (defaults to 2000000000)
+                top: '50%', // Top position relative to parent
+                left: '50%' // Left position relative to parent
+            };
+            var target = document.getElementById('spinholder');
+            var spinner = new Spinner(opts);
+            var spinStopTimeout = -999999;
+            $(document).ajaxStart(function () {
+                if(spinStopTimeout&gt;=0){
+                    clearTimeout(spinStopTimeout);
+                    spinStopTimeout = -999999;
+                }
+                else{
+                    spinner.spin(target);
+                }
+            });
+            $(document).ajaxComplete(function () {
+                spinStopTimeout = setTimeout(function(){
+                    if(spinStopTimeout&gt;=0){
+                        spinner.stop();
+                        spinStopTimeout = -999999;
+                    }
+                },200);
+            });
+        });
+    </script>
+
+    <script>
+    
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?556d1ac1331d02bb7d5861d959c9e78c";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+
+
+
+</script>
+
+    <script type="text/javascript" src="http://ca.cubead.com/cubead_ca.js?seq=95347452"></script>
+</head>
+<body>
+    <div style="display: block" id="spinholder"></div>
+    <div class="header">
+        <div class="center">
+            <div class="siteNav">
+                <div class="siteNavCityChoose">
+                    <span class="title">我在深圳</span>
+                </div>
+                <div class="siteNavLogin">
+                    您好，欢迎来 <font class="colore14041">e万家</font>
+                    ！
+                    <a rel="nofollow" href="/login.html">登录</a>
+                    <a rel="nofollow" href="/register.html">注册</a>
+
+                </div>
+
+                <div class="siteNavEntry">
+                    <a rel="nofollow" href="/ucenter/favor.html">收藏夹</a>
+                    <a rel="nofollow" href="/ucenter/order_list.html">我的订单</a>
+                </div>
+            </div>
+            <div class="headerBody">
+
+                <a style="background-image: url('http://image1.ewj.com/2015/7/3/4312385.png')" class="headerLogo" target="_blank" imgsize="341X71" data-id="header:logo" data-type="imgLink" href="http://www.ewj.com"></a>
+
+                <ul class="headerShoppingStep">
+                    <li class="active">
+                        <div class="line"></div>
+                        <div class="radius">1</div>
+                        <span class="title">购物车</span>
+                    </li>
+                    <li>
+                        <div class="line"></div>
+                        <div class="radius">2</div>
+                        <span class="title">确认订单信息</span>
+                    </li>
+                    <li>
+                        <div class="line"></div>
+                        <div class="radius">3</div>
+                        <span class="title">提交订单</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        var cartsPage = null;
+        $(document).on("koInit", function () {
+        var elem = document.getElementById("cartsPage");
+        if (elem) {
+        cartsPage = new Carts();
+        ko.applyBindings(cartsPage, document.getElementById("cartsPage"));
+        cartsPage.loadCarts();
+        }
+        });
+        $(document).on("cartsLoaded", function (){
+        $("#cartsPage").show(0);
+        });
+        function primary(n){
+        //返回整数部分
+        return  Math.floor(Number(n));
+        }
+        function junior(n){
+        n = Number(n);
+        //返回小数部分
+        var j = n - Math.floor(n);
+        j = j.toFixed(2);
+        return j.substring(1,4);
+        }
+        $(document).ready(function(){
+        $(document).attr("title","我的购物车 - e万家");
+        $(".jieSuanNote i").bind("mouseover", function () {
+        $(".haiguanNote").show();
+        }).bind("mouseout", function () {
+        $(".haiguanNote").hide();
+        });
+        });
+        function showMsg(el){
+        var self = $(el);
+        if($(".note",self).is(":visible")){
+        $(".note",self).hide();
+        }else{
+        $(".note",self).show();
+        }
+        }
+    </script>
+
+    <link rel="stylesheet" href="http://image1.ewj.com/2016/4/6/12440051.css">
+    <!-- 加价购商品 "此模块用ajax来填充数据" -->
+    <div id="lowPricePresentSelector" class="messagePanel jiaJiaGetGood">
+        <div class="messagePanelHd">
+            请选择换购商品，数量有限，换完即止 <i data-bind="click:close" class="closeBtn"></i>
+        </div>
+        <div class="messagePanelBd">
+            <div class="tableWrap">
+                <table data-bind="foreach:presents"></table>
+            </div>
+            <div class="btnGroup textCenter mt15">
+                <button data-bind="click:ok" class="btn btnPrimary continue">确定</button>
+                <button data-bind="click:close" class="btn btnDefault cancel">取消</button>
+            </div>
+        </div>
+    </div>
+    <!-- end 加价购商品 -->
+    <!-- 提示框 -->
+    <div id="confirmDialog" class="messagePanel information">
+        <div class="messagePanelHd">
+            提示 <i data-bind="click:cancel" class="closeBtn"></i>
+        </div>
+        <div class="messagePanelBd">
+            <ul>
+                <li>
+                    <span data-bind="html:message"></span>
+                </li>
+            </ul>
+
+            <div class="btnGroup textCenter mt15">
+                <button data-bind="click:ok,visible:showOKbtn(),text:okButtonCaption" class="btn btnPrimary continue">确定</button>
+                <button data-bind="click:cancel,visible:showCancelbtn(),text:cancelButtonCaption" class="btn btnDefault cancel">取消</button>
+            </div>
+        </div>
+    </div>
+    <!-- end 提示框 -->
+    <!-- 单品优惠 -->
+    <div id="ruleSelectorDialog" class="messagePanel information">
+        <div class="messagePanelHd">
+            选择单品优惠
+            <i data-bind="click:close" class="closeBtn"></i>
+        </div>
+        <div class="messagePanelBd">
+            <ul data-bind="foreach:availableRuleResults"></ul>
+
+            <div class="btnGroup textCenter mt15">
+                <button data-bind="click:ok" class="btn btnPrimary continue">确定</button>
+                <button data-bind="click:close" class="btn btnDefault cancel">取消</button>
+            </div>
+        </div>
+    </div>
+    <!-- end 单品优惠 -->
+    <!-- 选择赠品 "此模块用ajax来填充数据" -->
+    <div id="freePricePresentSelector" class="messagePanel chooseGift">
+        <div class="messagePanelHd">
+            请选择换购商品，数量有限，换完即止
+            <i data-bind="click:close" class="closeBtn"></i>
+        </div>
+        <div class="messagePanelBd">
+            <p class="tips">您共可以选择1件赠品，还剩余1件赠品</p>
+            <div class="tableWrap">
+                <table>
+                    <tbody>
+                        <tr class="row">
+                            <td width="30">
+                                <div class="checkbox enableSelect">
+                                    <i></i>
+                                </div>
+                            </td>
+                            <td width="370">
+                                <a href="" class="thumb">
+                                    <img width="80" height="80" alt="" src=""></a>
+                                <div class="info">
+                                    <a href="" class="name">佳沛绿奇异果30个新西兰进口经典绿心猕猴桃 新鲜水果</a>
+                                    <p class="textPrimary price">
+                                        ￥ <strong>139</strong>
+                                        .00
+                                    </p>
+                                </div>
+                            </td>
+                            <td class="enableSelect">
+                                <span class="operate sub"></span>
+                                <input type="text" class="count">
+                                <span class="operate add"></span>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td width="30">
+                                <div class="checkbox enableSelect">
+                                    <i></i>
+                                </div>
+                            </td>
+                            <td width="370">
+                                <a href="" class="thumb">
+                                    <img width="80" height="80" alt="" src=""></a>
+                                <div class="info">
+                                    <a href="" class="name">佳沛绿奇异果30个新西兰进口经典绿心猕猴桃 新鲜水果</a>
+                                    <p class="textPrimary price">
+                                        ￥ <strong>139</strong>
+                                        .00
+                                    </p>
+                                </div>
+                            </td>
+                            <td class="enableSelect">
+                                <span class="operate sub"></span>
+                                <input type="text" class="count">
+                                <span class="operate add"></span>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td width="30">
+                                <div class="checkbox enableSelect">
+                                    <i></i>
+                                </div>
+                            </td>
+                            <td width="370">
+                                <a href="" class="thumb">
+                                    <img width="80" height="80" alt="" src=""></a>
+                                <div class="info">
+                                    <a href="" class="name">佳沛绿奇异果30个新西兰进口经典绿心猕猴桃 新鲜水果</a>
+                                    <p class="textPrimary price">
+                                        ￥
+                                        <strong>139</strong>
+                                        .00
+                                    </p>
+                                </div>
+                            </td>
+                            <td class="enableSelect">
+                                <span class="operate sub"></span>
+                                <input type="text" class="count">
+                                <span class="operate add"></span>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td width="30">
+                                <div class="checkbox enableSelect">
+                                    <i></i>
+                                </div>
+                            </td>
+                            <td width="370">
+                                <a href="" class="thumb">
+                                    <img width="80" height="80" alt="" src=""></a>
+                                <div class="info">
+                                    <a href="" class="name">佳沛绿奇异果30个新西兰进口经典绿心猕猴桃 新鲜水果</a>
+                                    <p class="textPrimary price">
+                                        ￥
+                                        <strong>139</strong>
+                                        .00
+                                    </p>
+                                </div>
+                            </td>
+                            <td class="enableSelect">
+                                <span class="operate sub"></span>
+                                <input type="text" class="count">
+                                <span class="operate add"></span>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td width="30">
+                                <div class="checkbox enableSelect">
+                                    <i></i>
+                                </div>
+                            </td>
+                            <td width="370">
+                                <a href="" class="thumb">
+                                    <img width="80" height="80" alt="" src=""></a>
+                                <div class="info">
+                                    <a href="" class="name">佳沛绿奇异果30个新西兰进口经典绿心猕猴桃 新鲜水果</a>
+                                    <p class="textPrimary price">
+                                        ￥
+                                        <strong>139</strong>
+                                        .00
+                                    </p>
+                                </div>
+                            </td>
+                            <td class="enableSelect">
+                                <span class="operate sub"></span>
+                                <input type="text" class="count">
+                                <span class="operate add"></span>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td width="30">
+                                <div class="checkbox enableSelect">
+                                    <i></i>
+                                </div>
+                            </td>
+                            <td width="370">
+                                <a href="" class="thumb">
+                                    <img width="80" height="80" alt="" src=""></a>
+                                <div class="info">
+                                    <a href="" class="name">佳沛绿奇异果30个新西兰进口经典绿心猕猴桃 新鲜水果</a>
+                                    <p class="textPrimary price">
+                                        ￥
+                                        <strong>139</strong>
+                                        .00
+                                    </p>
+                                </div>
+                            </td>
+                            <td class="enableSelect">
+                                <span class="operate sub"></span>
+                                <input type="text" class="count">
+                                <span class="operate add"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btnGroup textCenter mt15">
+                <button class="btn btnPrimary continue">确定</button>
+                <button class="btn btnDefault cancel">取消</button>
+            </div>
+        </div>
+    </div>
+    <!-- end 选择赠品 -->
+    <!-- 修改优惠 -->
+    <div id="orderRuleSelector" class="messagePanel xiugaiYouhui">
+        <div class="messagePanelHd">
+            修改优惠
+            <i data-bind="click:cancel" class="closeBtn"></i>
+        </div>
+        <div class="messagePanelBd">
+            <span>请选择参与的活动</span>
+            &nbsp;
+            <select data-bind="options:rules,optionsText:'name',value:selectedRule" id="" name=""></select>
+
+            <div class="btnGroup textCenter mt15">
+                <button data-bind="click:ok" class="btn btnPrimary continue">确定</button>
+            </div>
+        </div>
+    </div>
+    <!-- end 修改优惠 -->
+    <div style="display: none" id="skuSelector"></div>
+    <div class="container" id="buyflowCart">
+        <div style="" id="cartsPage" class="page">
+            <div class="slide"></div>
+            <div class="backededed">
+                <div class="center product">
+                    <div class="mani_cat_but">
+                        <span class="title">购物车</span>
+                        <a href="http://www.ewj.com" class="but">继续购物 &gt;</a>
+                    </div>
+
+                    <!-- ko if:showEmptyCart -->
+                    <!-- /ko -->
+                    <!-- ko if:!showEmptyCart() -->
+
+                    <div class="datles_table">
+                        <div class="th">
+                            <div class="ld1">
+                                <div data-bind="css:{active:allChecked},click:toggle,visible:!readOnly()" class="checkbox enableSelect active">
+                                    <i></i>
+                                </div>
+                                <!--ko if:!readOnly()-->
+                                全选
+                                <!-- /ko -->&nbsp;</div>
+                            <div class="ld2">商品</div>
+                            <div class="ld3">规格属性</div>
+                            <div class="ld4">单价(元)</div>
+                            <div class="ld6">数量</div>
+                            <div class="ld7">商品小计(元)</div>
+                            <div data-bind="visible:!readOnly()" class="ld8">操作</div>
+                        </div>
+
+                        <!-- ko foreach: carts -->
+                        <ul data-bind="visible:!($parent.readOnly() &amp;&amp; (checkedNumber() == 0))" class="ll">
+                            <div class="merchantHeader">
+                                <div data-bind="css:{active:allChecked},click:toggle,visible:!$parent.readOnly()" class="checkbox active">
+                                    <i></i>
+                                </div>
+                                <span class="merchantName" data-bind="text:merchantName">e万家</span>
+                                <span class="payPrice" data-bind="visible:totalPayPrice()&gt;0">
+                                    <span data-bind="text:totalPayPrice()">45.00</span>
+                                    <span data-bind="visible:totalDiscount()&gt;0,text:'已减:'+totalDiscount()" style="color: green; display: none;">已减:0.00</span>
+                                </span>
+                            </div>
+                            <!-- ko foreach:buyItems -->
+                            <li data-bind="visible:!($parents[1].readOnly() &amp;&amp; !checked())">
+                                <div class="ld1">
+                                    <div data-bind="css:{active:checked},click:toggle, visible:!$parents[1].readOnly()" class="checkbox enableSelect active">
+                                        <input type="hidden">
+                                        <i></i>
+                                    </div>
+                                    <div class="img_view">
+                                        <img data-bind="attr:{src:icon}" src="http://image1.ewj.com/2015/3/13/995553_90X90.jpg"></div>
+                                </div>
+                                <div class="ld2">
+                                    <a data-bind="text:productName,click:$parents[1].toDetail">麦斯威尔三合一原味咖啡42条</a>
+                                </div>
+                                <div class="ld3">
+                                    <span data-bind="text:attrsString"></span>
+                                </div>
+                                <div data-bind="text:'¥'+unitPrice()" class="ld4">¥45</div>
+                                <div class="ld6">
+                                    <span class="midde">
+                                        <a data-bind="click:$root.minus,visible:!$parents[1].readOnly()" class="less"></a>
+                                        <input data-bind="value:acceptedNumber" class="quantity_txt">
+                                        <a data-bind="click:$root.add,visible:!$parents[1].readOnly()" class="add"></a>
+                                    </span>
+                                </div>
+                                <div class="ld7">
+                                    <span data-bind="text:'¥'+totalPayPrice()" class="font18">¥45</span>
+                                </div>
+                                <div data-bind="visible:!$parents[1].readOnly()" class="ld8">
+                                    <span class="midde">
+                                        <a data-bind="" id='delete_'>删除</a>
+                                        <a data-bind="visible:excludeOtherOrderRule().length&gt;0,click:chooseOrderRule" style="display: none;">修改优惠</a>
+                                    </span>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="giftWrap">
+                                    <div data-bind="foreach:userFriendlyMessages" class="giftDiv">
+                                        <div class="item normal">
+                                            <span data-bind="text:actionType">积分</span>
+                                            <a data-bind="html:msg">购物送积分：获得45.00积分</a>
+                                        </div>
+                                    </div>
+
+                                    <div data-bind="foreach:freePresents" class="freePresents"></div>
+                                    <div data-bind="foreach:lowPricePresentRuleResults" class="lowPricePresent"></div>
+
+                                    <div data-bind="foreach:orderInclusiveRules" class="orderInclusiveRules"></div>
+                                </div>
+
+                                <div class="clear"></div>
+                                <!-- ko if:isCombiProduct -->
+                                <!-- /ko -->
+                                <!-- if:combiProduct --> </li>
+                            <!-- /ko --> </ul>
+                        <!-- 现在开始订单级别的活动 -->
+                        <!-- ko foreach:orderRuleTargets -->
+                        <!-- /ko -->
+                        <!-- foreach:orderRuleTargets -->
+
+                        <!-- /ko -->
+                        <!-- foreach:carts -->
+
+                        <div data-bind="visible:!readOnly()" class="upcaozuo">
+                            <div class="float_l">
+                                <div data-bind="css:{active:allChecked},click:toggle" class="checkbox enableSelect active">
+                                    <i></i>
+                                </div>
+                                全选
+                            </div>
+                            <div class="float_r">
+                                <div class="quantity">
+                                    <ul>
+                                        <li>
+                                            <span>商品总额：</span> <em data-bind="text:'¥'+totalOrderProductPrice()" class="price">¥45.00</em>
+                                        </li>
+                                        <li>
+                                            <span>优惠：</span> <em data-bind="text:'-¥'+totalDiscount()" class="price">-¥0.00</em>
+                                        </li>
+                                        <li>
+                                            <span>合计（不含运费）：</span>
+                                            <em data-bind="text:'¥'+totalPayPrice()" class="price colore14041">¥45.00</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <span class="bd">
+                                    已经选中 <b class="colore14041" data-bind="text:checkedNumber">1</b>
+                                    件商品
+                                </span>
+                                <span>
+                                    总重量 <b data-bind="text:checkedTotalWeight">0.60</b>
+                                    kg
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-bind="visible:!readOnly()" class="jiesuan">
+                        <div class="float_r">
+                            <a data-bind="click:checkOut,visible:allowCheckOut()" class="pay">结算</a>
+                            <div class="overNote">
+                                <span data-bind="visible:allowCheckOut()&amp;&amp;hasCrossBorderOrder()" class="jieSuanNote" style="display: none;">新税制取消免税门槛，订单金额2000元内不必分单</span>
+                                <span data-bind="visible:!allowCheckOut()" class="jieSuanNote" style="display: none;">
+                                    单笔订单总额超过了海关限额￥2000，请合理选择商品进行结算
+                                    <i class="questionIcon"></i>
+                                </span>
+                                <div data-bind="visible:!allowCheckOut()" class="haiguanNote" style="display: none;">
+                                    海关规定:
+                                    <br>
+                                    1.消费者购买跨境商品，以"个人启用，合理数量"为原则，每单最大购买金额不得超过2000元人民币（不含税）。
+2.如有优惠活动，则2000元限值适用于订单优惠前的金额。
+                                </div>
+                            </div>
+                            <a data-bind="visible:!allowCheckOut()" class="notPay" style="display: none;">结算</a>
+                        </div>
+                    </div>
+
+                    <!-- /ko --> </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-bottom:50px;" class="center">
+
+        <div class="web_map_My">
+
+            <span data-id="footer:copyright" data-type="htmlSource" class="copyright">
+                Copyright@华润万家有限公司&nbsp;&nbsp;粤ICP备05036369号-4&nbsp;&nbsp;&nbsp;ewj.com&nbsp;版权所有
+            </span>
+
+        </div>
+    </div>
+    <script>var serverUrl = "http://www.ewj.com";</script>
+
+    <script type="text/javascript" src="/extensionUrlContrl/services/getReferrer.jsx"></script>
+
+    <script type="text/javascript"> function convertclk(_traker) {  _traker._monitorEvent("A", "class", "pay", "C", "checkOut"); }   var _doc=document.getElementsByTagName('head')[0]; var script=document.createElement('script'); script.setAttribute('type','text/javascript'); script.setAttribute('src','http://ca.cubead.com/cubead_ca.js?seq=' + Math.floor(Math.random() * ( 99999999 + 1))); _doc.appendChild(script); script.onload=script.onreadystatechange=function(){    if((!this.readyState)||(this.readyState=='loaded')||(this.readyState=='complete')){         _traker._init("www.ewj.com","174595");              if (typeof(convertclk)=="function"){                convertclk(_traker);         }      if (typeof(_ca_convert)=="function"){           _ca_convert(_traker);         }         script.onload=script.onreadystatechange=null;    }    } </script>
+
+    <script src="/buyflowApp/loadCart.jsx"></script>
+   <!--  <script>
+       AppConfig.orderFormPageUrl = "/orderForm.html";
+       AppConfig.loginUrl = "/login.html";
+       AppConfig.spec = "90X90";
+       AppConfig.mergerCart = "false";//是否合并购物车
+       AppConfig.merchantType = "EWJ_KJJP,EWJ_BDSH";//需要结算的商家类型
+       AppConfig.maxTaxPrice = 0;//免征税的最大限额
+       AppConfig.maxAllowCrossOrderPrice = 2000;//免征税的最大限额
+   </script> -->
+    <script type="text/javascript">
+        $('#delete_').click(function(){
+            $('.datles_table').remove();
+        })
+    </script>
+
+</body>
+</html>

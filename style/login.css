@@ -1,0 +1,363 @@
+
+/* global */
+.panel .panelBd {
+    min-height:400px;
+}
+
+.payBg{
+    background: #ededed;
+}
+
+/*login top r*/
+.loginTopR{
+    color: #666;
+    font-size: 12px;
+}
+.loginTopR a{
+    color: #666;
+}
+.loginTopR a:hover{
+    color: #e04040;
+}
+.loginTopR .but{
+    color:#1f5aa0;
+    text-decoration: underline;
+}
+.loginTopR span{
+    padding: 0 14px;
+}
+/* main */
+.panel {
+    margin-top: 40px;
+}
+
+.panelHd {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 30px;
+    background: #fff;
+    position: relative;
+}
+.panelHd .signin{
+    color: #e04040;
+    text-decoration: underline;
+    top:0;
+    position: absolute;
+    right: 26px;
+}
+
+.panelHd h1 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+}
+
+.panelBd {
+    padding: 35px 45px 45px 45px;
+    background: #fff url(../images/50432.png) repeat-x;
+}
+
+#Loginpage .headerLogo {
+    margin-top: 22px;
+}
+.UserSignIn{
+    /*width:480px;*/
+    display: block;
+    margin-left: 200px;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.UserSignIn label {
+    display: inline-block;
+    width: 145px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+
+.UserSignIn h2 { font-weight: normal;}
+
+/* sign in */
+.UserSignIn.signIn {
+    margin-top: 10px;
+    padding-left: 355px;
+}
+
+.UserSignIn.signIn label {
+    margin-left: -155px;
+}
+.UserLogin p{
+    color: #333;
+}
+.UserSignIn .username,
+.UserSignIn .password
+ {
+     width:373px;
+ }
+.UserSignIn h3 { line-height:5px;padding-left:30px}
+.UserSignIn .loginId
+{
+    width:373px;
+}
+.UserSignIn .textInput{
+    /*margin-left:6px!important;*/
+}
+.UserSignIn .userpassword,.UserSignIn .password_confirm{
+    width:374px;
+}
+.UserSignIn .deptName{
+    margin-left:-3px
+}
+.UserSignIn #regionCanvas select{
+    height: auto;
+    line-height: normal;
+    margin-left: -18px;
+    margin-right: 25px;
+    padding:15px 15px;
+    vertical-align: 2px;
+    border: 1px solid #d9d9d9;
+    transition: all 0.25s ease 0s;
+}
+.UserSignIn .business,.UserSignIn .businessNature{
+    margin-left:-3px
+}
+
+.UserSignIn .aptcha{
+    padding:11px 15px;
+    width: 157px;
+}
+.UserSignIn .captchaImg{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    margin-left: 6px;
+}
+.UserSignIn .aptchaWrap a{
+    font-size: 12px;color:#aaa;
+}
+.UserSignIn .aptchaWrap a:hover{
+    text-decoration: underline;
+}
+.UserSignIn .operatePw{
+    width: 405px;
+    font-size: 12px;
+}
+.UserSignIn .operatePw .checkbox{
+    vertical-align: middle;
+    position: relative;
+    top:-3px;
+    margin-right: 5px;
+}
+.UserSignIn .operatePw .checkbox {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    line-height: 13px;
+    vertical-align: middle;
+    margin-right: 10px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.UserSignIn .operatePw .checkbox i {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    vertical-align: top!important;
+    border: 1px solid #cfcfcf;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.UserSignIn .operatePw .checkbox.active i {
+    background: url(../images/loadImage.jsx.png) no-repeat center center;
+}
+
+.UserSignIn .operatePw a{
+    float: right;
+    color: #1f589d;
+    text-decoration: underline;
+}
+.UserSignIn .operatePw a:hover {
+    color: #e14041;
+}
+.UserSignIn .SignInBtn{
+    color: #fff;
+    font-size: 24px;
+    background: #e04040;
+    display: inline-block;
+    width:405px;
+    height: 51px;
+    line-height: 51px;
+    border-top: 1px #f0a0a0 solid;
+    border-bottom: 1px #c11f1f solid;
+    text-align: center;
+    padding: 0;
+    /*margin-left: 187px;*/
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+}
+.btnPrimary:hover,
+.UserSignIn .SignInBtn:hover{
+    color: #fff;
+    background: #ff5758;
+    border-top: 1px solid #f0a0a0;
+    border-bottom: 1px solid #c21f1f;
+}
+.UserSignIn .UserFt{
+    font-size: 14px;
+    /*margin-left: 68px;*/
+    color: #696969;
+}
+
+.signIn .UserLoginFt {
+    margin-top: 17px;
+}
+
+.signIn .UserLoginFt * {
+    vertical-align: middle;
+}
+
+.UserSignIn .UserLoginFt .qq{
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    padding: 0px 10px;
+    background: url(http://image1.ewj.com/2015/2/2/50419.png) no-repeat ;
+    margin-right: 13px;
+    margin-left: 14px;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+}
+.UserSignIn .UserLoginFt .xina{
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    padding: 0px 14px;
+    margin-left: 13px;
+    background: url(http://image1.ewj.com/2015/2/2/50419.png) no-repeat -46px 0;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+}
+
+.UserSignIn .UserLoginFt .qq:hover{
+    background: url(http://image1.ewj.com/2015/2/2/50419.png) no-repeat 0 -25px;
+}
+.UserSignIn .UserLoginFt .xina:hover{
+    background: url(http://image1.ewj.com/2015/2/2/50419.png) no-repeat -46px -25px;
+}
+
+
+
+
+
+
+.registrationEmailSuccess { border-image: none; min-height: 367px; background: #fff;}
+.registrationEmailSuccess .panelContent {
+    width: 675px;
+    margin: 0 auto;
+}
+.registrationEmailSuccess .message { padding-top: 70px; font-size: 20px; line-height: 32px; margin-left: 112px;}
+.registrationEmailSuccess .message * {vertical-align: middle; color: #3f403f; }
+.registrationEmailSuccess .btnWrap { margin-left: 167px;}
+.registrationEmailSuccess .btnWrap * {vertical-align: middle;}
+.registrationEmailSuccess .btnPrimary { width: auto; padding: 0 17px 0 20px; height: 28px; line-height: 28px; font-size: 14px;}
+.registrationEmailSuccess .btnDefault30 { width: auto; padding: 0 17px 0 20px;}
+.registrationEmailSuccess .tips {
+    padding: 12px 0 0 167px;
+    margin: 26px 0 0 0;
+    color: #6d6d6d;
+    border-top: 1px dotted #f0f0f0;
+}
+
+/* registration phone success */
+.registrationPhoneSuccess { border-image: none; min-height: 375px;}
+.registrationPhoneSuccess .message { padding-top: 85px;}
+.registrationPhoneSuccess .message * {vertical-align: middle; color: #3f403f; }
+.registrationPhoneSuccess .btnPrimary { width: auto; padding: 0 25px 0 28px; height: 33px; line-height: 33px; font-size: 14px;}
+.registrationPhoneSuccess .tips {
+    width: 574px;
+    padding: 12px 0 0 0;
+    margin: 20px auto 0 auto;
+    color: #6d6d6d;
+    border-top: 1px solid #f0f0f0;
+}
+.register .textInput{
+    width: 374px;
+}
+.register .captcha{
+    width: 157px;
+}  
+
+.UserSignIn .SignInBtn{
+    border-left: 0 none;border-right: 0 none;cursor: pointer;
+}
+
+.help-block{
+    display: block;
+    color: #aaa;
+}
+
+.has-error .help-block{
+    color: #e14041;
+}
+
+.registerEmail .Plink{
+    display: inline-block;
+}
+.UserSignIn .operatePw .checkbox{
+    top:-1px;
+}
+
+.protocolPanel #protocol-con{
+    overflow-y: scroll;
+}
+.protocolPanel .protocol-content{
+    margin-top: 0;
+}
+
+.operatePw.form-group .help-block{
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+.signIn_adv{
+    position: absolute;
+    left:100px;
+    top: 30px;
+    background: url(http://image1.ewj.com/2015/6/26/4010009.jpg) no-repeat 0px 0px;
+    width: 370px;
+    height: 320px;
+    z-index: 99;
+}
+
+.UserSignIn .aptchaWrap a{
+    color:#333;
+}
+.enableSelect {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+}
+.ableSelect {
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    -o-user-select: text;
+}  

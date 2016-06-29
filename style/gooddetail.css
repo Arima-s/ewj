@@ -1,0 +1,588 @@
+.backededed {
+    background-color: #ededed;
+    display: inline-block;
+    width: 100%;
+    margin-bottom:50px;
+}
+.crumb {
+    padding: 15px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.crumb a {
+    color: #666;
+}
+
+.crumb a:hover {
+    text-decoration: none;
+    color: #e14041;
+}
+
+.crumb a.active {
+    color: #000;
+    text-decoration: none;
+}
+
+.crumb .arrow {
+    display: inline-block;
+    width: 7px;
+    height: 14px;
+    margin: 0 8px;
+    vertical-align: middle;
+    
+}
+.detail_meta {
+    width:100%;
+    position:relative;
+    float:left;
+}
+.detail_meta .gallery {
+
+}
+
+.preview{
+    float:left;
+    width:420px;
+    height:420px;
+    padding:5px;
+    border:1px solid #f03;
+    overflow:hidden;
+}
+
+.mid_img_ul li{
+    float:left;
+}
+.mid_img_ul li img{
+    width:420px;
+    height:420px;
+}
+.preview .midImg{
+    width:420px;
+    height:420px;
+    background: #eee;
+    position: relative;
+    /* border:2px solid #366 */
+}
+.preview .float_layer {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #000;
+    background: #fff;
+    filter: alpha(opacity: 30);
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:none;
+}          
+.preview .mark {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+}         
+.preview .out_pic {
+    position: absolute;
+    top: -1px;
+    left: 440px;
+    width:418px;
+    height:418px;
+    overflow: hidden;
+    border: 2px solid #CCC;
+    display: none;
+    z-index:5;
+}         
+.preview .out_pic img {
+    position: absolute;  
+    width: 800px;
+    height: 800px;
+}
+.preview .smallImg {
+    position: relative;
+    height: 85px;
+    margin: 15px 0;
+    width: 420px;
+    float: left;
+}
+.preview .scrollbutton {
+    width: 14px;
+    height: 100%;
+    line-height:85px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    cursor: pointer;
+    color:#9a9a9a;
+    font-size:20px;
+    width:20px;
+    transition:all 0.5s ease;
+}
+.preview .scrollbutton.smallImgDown {
+    float:right;
+    text-align:right;
+}
+.preview .scrollbutton.smallImgUp.disabled,
+.preview .scrollbutton.smallImgDown.disabled {
+    opacity:0.5;
+}
+#imageMenu {height: 85px; width:380px; overflow:hidden; margin-left:0; float:left;}
+#imageMenu ul {
+    height:85px;
+}
+#imageMenu li {
+    height: 85px;
+    width: 85px;
+    overflow: hidden;
+    margin-right: 10px;
+    float: left;
+    text-align: center;
+}
+#imageMenu li img {
+    width: 85px;
+    height: 85px;
+    cursor: pointer;
+}
+#imageMenu li#onlickImg,
+#imageMenu li:hover {
+    width: 79px;
+    height: 79px;
+    border: 3px solid #3c3;
+}
+
+#imageMenu li#onlickImg img,
+#imageMenu li:hover img {
+    margin: -3px 0 0 -3px;
+}
+#imageMenu li#onlickImg {
+    border-color:#e14041!important;
+} 
+
+.detail_meta .detail_right {
+    width:733px;
+    float:right;
+    margin-bottom: 20px;
+}
+.detail_meta .detail_right .name {
+    color:#333;
+    font-size:22px;
+    width:100%;
+    line-height: 26px;
+    float:left;
+    margin: 5px 0 5px 0;
+}
+.detail_meta .detail_right .introduce {
+    color: #555;
+    float: left;
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+}
+.detail_meta .detail_right .money {
+    width:100%;
+    float:left;
+    border-bottom:1px solid #dedede;
+    font-size:14px;
+    color:#333;
+    line-height:60px;
+    margin-top: 2px;
+}
+.detail_meta .detail_right .money .textPrimary {
+    display: inline-block;
+    font-size: 26px;
+    color: #e14041;
+    margin:0 20px;
+    position: relative;
+    top: 7px;
+}
+.detail_meta .detail_right .money .textPrimary strong {
+    font-size:38px;
+}
+.detail_meta .detail_right .money .cankao {
+    color:#a2a2a2;
+    margin-left:10px;
+}
+.detail_meta .detail_right .dt_lins {
+    float:left;
+    width:100%;
+    font-size:14px;
+    color:#333;
+    margin-top:20px;
+}
+
+.detail_meta .detail_right .dt_lins.sale {
+    margin-top:26px;
+    position: relative;
+}
+
+.detail_meta .detail_right .dt_lins.sale li {
+    line-height: 18px;
+}
+
+.detail_meta .detail_right .dt_lins.sale .list{
+}
+
+.detail_meta .detail_right .dt_lins.sale .list li * {
+    vertical-align: middle;
+}
+
+.detail_meta .detail_right .dt_lins.sale .list li .good {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ddd;
+}
+
+.detail_meta .detail_right .dt_lins.sale .list li i{
+    font-style: normal;
+    color: #e14041;
+    margin-right: 10px;
+    font-size: 12px;
+}
+.detail_meta .detail_right .dt_lins.sale.active .list {
+    height: auto;
+}
+
+.detail_meta .detail_right .dt_lins.sale .toggleBtn {
+    position: absolute;
+    right: 0;
+    top: -45px;
+    font-size: 12px;
+    color: #7b7b7b;
+    padding: 0 20px 0 0;
+    cursor: pointer;
+}
+
+.detail_meta .detail_right .dt_lins.sale .toggleBtn i {
+    width: 13px;
+    height: 8px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    background: url("http://image1.ewj.com/2015/2/2/50477.png") no-repeat;
+}
+
+.detail_meta .detail_right .dt_lins.sale.active .toggleBtn i{
+    background: url("http://image2.ewj.com/2015/2/2/50478.png") no-repeat;
+}
+
+.detail_meta .detail_right .dt_lins.norm {
+    margin-top:35px;
+}
+.detail_meta .detail_right .dt_lins > .title {
+    width: 50px;
+    float: left;
+}
+.detail_meta .detail_right .dt_lins > .list {
+    float: left;
+}
+.detail_meta .detail_right .dt_lins  > .list > li {
+    clear: both;
+    float: left;
+    margin-bottom:11px;
+    color: #888;
+}
+.detail_meta .detail_right .dt_lins  > .list > li:last-child {
+    margin:0;
+}
+.detail_meta .detail_right .dt_lins  > .list > li > .flag {
+    border-radius: 17px;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    margin-right: 10px;
+    padding: 0 5px;
+}
+.detail_meta .detail_right .dt_lins  > .list > li > .flag.red {
+    background-color: #e14041;
+}
+.detail_meta .detail_right .dt_lins  > .list > li > .flag.blue {
+    background-color: #1e589c;
+}
+.detail_meta .detail_right .dt_lins  > .list > li > .flag.gray {
+    background-color: #78b235;
+}
+.detail_meta .detail_right .dt_lins.norm {
+    line-height:35px;
+}
+
+.detail_meta .detail_right .dt_lins.tips {
+    margin-top: 15px;
+}
+.detail_meta .detail_right .dt_lins .norm_list {
+    width:681px;
+    float:left;
+}
+
+.detail_meta .detail_right .dt_lins .norm_list > a {
+    line-height:35px;
+    height:35px;
+    float:left;
+    padding:0 15px;
+    margin: 0 10px 10px 0;
+    color:#333;
+    font-size:14px;
+    border:1px solid #d1d1d1;
+    position:relative;
+    background-color:#fff;
+    transition:border-color 0.3s ease;
+    cursor:pointer;
+}
+.detail_meta .detail_right .dt_lins .norm_list > a.active,
+.detail_meta .detail_right .dt_lins .norm_list > a:hover {
+    border:2px solid #e14041;
+    padding: 0 14px;
+    height:33px;
+    line-height:33px;
+}
+.detail_meta .detail_right .dt_lins .norm_list > a.enable,
+.detail_meta .detail_right .dt_lins .norm_list > a.enable:hover {
+    color:#999;
+    border: 1px dashed #d1d1d1;
+    padding: 1px 15px;
+    margin:0 9px 0 -1px;
+    height:32px;
+    line-height:32px;
+    cursor: no-drop;
+}
+.detail_meta .detail_right .dt_lins.quantity {
+    line-height:30px;
+    position: relative;
+}
+.detail_meta .quantity .kucun {
+    font-size: 12px;
+    color: #999;
+    margin-left: 15px;
+}
+
+.detail_meta .quantity .tips {
+    line-height:28px;
+    font-size: 12px;
+    color: #e14041;
+    margin-left: 5px;
+}
+.detail_meta .detail_right .dt_lins.quantity .add,
+.detail_meta .detail_right .dt_lins.quantity .less {
+    width: 12px;
+    height: 30px;
+    text-align: center;
+    background: url(http://image1.ewj.com/2015/2/2/50415.png) no-repeat center;
+    float: left;
+    cursor: pointer;
+    transition:all 1s ease-out;
+}
+.detail_meta .detail_right .dt_lins.quantity .less {
+    background-image: url(http://image2.ewj.com/2015/2/2/50416.png);
+}
+
+.detail_meta .detail_right .dt_lins.quantity .add:hover,
+.detail_meta .detail_right .dt_lins.quantity .less:hover {
+    transform:scale(0.8);
+    -webkit-transform:scale(0.8);
+}
+.detail_meta .detail_right .dt_lins.quantity .quantity_txt {
+    line-height:28px;
+    height:28px;
+    border:1px solid #d1d1d1;
+    float:left;
+    width:50px;
+    text-align:center;
+    margin:0 10px;
+    padding: 0;
+}
+.detail_meta .detail_right .dt_lins.region {
+    line-height: 30px;
+    margin-top: 25px;
+}
+.detail_meta .detail_right .dt_lins.region .region_list {
+    float:left;
+    position:relative;
+    z-index: 10;
+    background-color:#fff;
+    border:1px solid #d1d1d1;
+}
+.detail_meta .detail_right .dt_lins.region .region_list .title {
+    float:left;
+    padding:0 10px;
+    cursor:pointer;
+    position:relative;
+    z-index:2;
+    background-color:#fff;
+}
+.detail_meta .detail_right .dt_lins.region .region_list .title .cnt {
+    float: left;
+}
+.detail_meta .detail_right .dt_lins.region .region_list .title .ico {
+    border-left: 1px solid #ddd;
+    color: #999;
+    float: right;
+    font-size: 9px;
+    height: 15px;
+    line-height: 15px;
+    margin: 9px 0 0 10px;
+    padding-left: 10px;
+}
+.detail_meta .detail_right .dt_lins.region .region_list .region_pop {
+    position:absolute;
+    left:-41px;
+    top:29px;
+    width:500px;
+    padding:20px;
+    border:1px solid #d1d1d1;
+    background-color:#fff;
+    display:none;
+}
+
+.detail_meta .detail_right .dt_lins.region .region_list .region_pop .region_pop_nav {
+    float:left;
+    width:100%;
+    position:relative;
+}
+.detail_meta .detail_right .dt_lins.region .region_list .region_pop .region_pop_nav > li {
+    float:left;
+    font-size:16px;
+    color:#454545;
+    margin-right:5px;
+    cursor:pointer;
+}
+.detail_meta .detail_right .dt_lins.region .region_list .region_pop .region_pop_nav > li > .tt {
+    padding: 0 15px;
+    border:solid #d1d1d1;
+    border-width:1px 1px 0;
+    float: left;
+}
+.detail_meta .detail_right .dt_lins.region .region_list .region_pop .region_pop_nav > li.active > .tt {
+    background-color:#fff;
+    position:relative;
+    z-index:2;
+}
+.detail_meta .detail_right .dt_lins.region .region_list .region_pop .region_pop_nav > li > .line {
+    position:absolute;
+    top:29px;
+    height:2px;
+    width:100%;
+    left:0;
+    background-color:#e14041;
+}
+.detail_meta .detail_right .dt_lins.region .region_list .region_pop .region_pop_nav > li.active{
+
+}
+.detail_meta .detail_right .dt_lins.region .region_list .region_pop .region_pop_nav > li .ico{
+    float:right;
+    font-size:5px;
+    margin:0 0 0 10px;
+    color:#999;
+}
+.detail_meta .detail_right .dt_lins.region .region_list .region_pop .region_pop_nav_list {
+    width:100%;
+    float:left;
+    margin-top:10px;
+}
+.detail_meta .detail_right .dt_lins.region .region_list .region_pop .region_pop_nav_list > li {
+    float:left;
+    width:100%;
+    display:none;
+}
+.detail_meta .detail_right .dt_lins.region .region_list .region_pop .region_pop_nav_list > li > a {
+    float:left;
+    margin-right:10px;
+    white-space:nowrap;
+    color:#979797;
+    cursor:pointer;
+    transition:all 0.5s ease;
+}
+.detail_meta .detail_right .dt_lins.region .region_list .region_pop .region_pop_nav_list > li > a:hover {
+    color: #e14041;
+}
+
+.detail_meta .detail_right .dt_lins.region .region_list .region_pop .region_pop_nav_list > li.active {
+    display:block;
+}
+
+.detail_meta .bute14041,
+.detail_meta .but25{
+    overflow: hidden;
+    line-height:43px;
+    float:left;
+    padding:0 20px;
+    tab-index: -10em;
+}
+
+.detail_meta .but25 {
+    line-height:42px;
+    border:1px solid #d1d1d1;
+    margin-left:10px;
+}
+
+.detail_meta .but25:hover {
+    border-color:#e14041;
+}
+
+.detail_meta .btnAddToCart {
+    float: left;
+    width: 190px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    background: #e14041;
+    border-top: 1px #f0a0a0 solid;
+    border-bottom: 1px solid #a42f30;
+    -webkit-transition: all .24s;
+    -moz-transition: all .24s;
+    -ms-transition: all .24s;
+    -o-transition: all .24s;
+    transition: all .24s;
+}
+.detail_meta .btnAddToCart:hover {
+    background: #fe7171;
+}
+
+.detail_meta .btnAddToCart * {
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
+.detail_meta .btnAddToCart i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.detail_meta .btnAddToCart.enable {
+    background: #bbb;
+    border-color: #bbb;
+}
+
+.detail_meta .btnAddToCart.enable:hover {
+    background: #bbb;
+    cursor: no-drop;
+}
+.detail_meta .btnAddFavorite i {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    font-size: 0;
+    margin-right: 6px;
+    background: url("http://image1.ewj.com/2015/2/2/50473.png") no-repeat;
+    -webkit-transition: all .24s;
+    -moz-transition: all .24s;
+    -ms-transition: all .24s;
+    -o-transition: all .24s;
+    transition: all .24s;
+}
+
+.detail_meta .btnAddFavorite:hover i {
+    background: url("http://image2.ewj.com/2015/2/2/50474.png") no-repeat;
+}
+
+.detail_meta .btnAddFavorite * {
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
